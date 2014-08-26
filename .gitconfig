@@ -1,0 +1,29 @@
+[user]
+	name = NAME
+	email = EMAIL
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[push]
+	default = upstream
+[pull]
+	rebase = true
+[alias]
+	co = checkout
+	b = branch -a
+	br = branch
+	ci = commit
+	s = status --short --branch
+	st = status -b
+	rb = rebase
+	df = diff
+	dc = diff --cached
+	l = log --graph --abbrev-commit --stat --decorate
+	unstage = reset HEAD --
+	last = !git log -n 1 --pretty=format:%H $1
+	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+	fs = !git fetch && git submodule update
+	cp = cherry-pick
+	cp-last = !git cherry-pick `git last $1`
