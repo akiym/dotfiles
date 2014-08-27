@@ -1,5 +1,6 @@
 set disassembly-flavor intel
 set pagination off
+set debug-file-directory /usr/lib/debug
 
 set print pretty on
 
