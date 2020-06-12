@@ -1,0 +1,24 @@
+set vertical-split = no
+set main-view = id date author commit-title:graph=v1,refs=yes
+
+bind generic <Ctrl-g> refresh
+bind status <Ctrl-g> refresh
+bind main <Ctrl-g> refresh
+
+bind generic a !git commit --amend
+bind generic g move-first-line
+bind generic G move-last-line
+
+bind generic C !@sh -c '/bin/echo -n %(commit) | /usr/bin/pbcopy'
+bind diff    C !@sh -c '/bin/echo -n %(commit) | /usr/bin/pbcopy'
+
+bind main R !git rebase -i %(commit)^
+bind diff R !git rebase -i %(commit)^
+bind diff F ?!git commit --fixup %(commit)
+bind diff S ?!git commit --squash %(commit)
+bind main F ?!git commit --fixup %(commit)
+bind main S ?!git commit --squash %(commit)
+
+bind blob B @hub browse -- tree/%(commit)/%(file)
+bind diff B @hub browse -- commit/%(commit)
+bind tree B @hub browse -- tree/%(commit)/%(directory)

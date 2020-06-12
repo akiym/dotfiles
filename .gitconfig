@@ -1,18 +1,20 @@
-[user]
-	name = NAME
-	email = EMAIL
+[include]
+	path = .gitconfig.local
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+[merge]
+	ff = false
 [push]
 	default = upstream
 [pull]
-	rebase = true
+	rebase = preserve
 [alias]
 	co = checkout
 	b = branch -a
 	br = branch
+	bra = branch-recent
 	ci = commit
 	s = status --short --branch
 	st = status -b
@@ -27,3 +29,19 @@
 	fs = !git fetch && git submodule update
 	cp = cherry-pick
 	cp-last = !git cherry-pick `git last $1`
+	sh = stash
+	shp = stash pop
+	cl = clone --depth 1
+	n = now
+	pl = pull
+	ps = push origin HEAD
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[diff]
+	compactionHeuristic = true
+[rebase]
+	autosquash = true
+[core]
+	editor = /usr/bin/vim

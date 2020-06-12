@@ -1,0 +1,8 @@
+[user]
+    name = NAME
+    email = EMAIL
+[core]
+    excludesfile = ~/.gitignore
+[ghq]
+    root = ~/.go/src
+    root = ~/src

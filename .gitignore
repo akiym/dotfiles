@@ -1,0 +1,14 @@
+.DS_Store
+.tags
+.tags1
+tags
+Session.vim
+.agignore
+.ptconfig.toml
+.rgignore
+.direnv/
+.idea/
+graphql.config.json
+:q
+:w
+.jenkins/pipeline.gdsl

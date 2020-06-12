@@ -1,0 +1,9 @@
+tags
+*.svg
+*.pem
+*.min.js
+*.js.map
+*export/*.json
+vendor/
+node_modules/
+blib/
